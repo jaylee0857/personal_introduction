@@ -1,0 +1,51 @@
+:root {
+  --dark-100: #121212;
+  --white: #f1f1f1;
+  --primary-100: #42b883;
+  --low-contrast-text: #989898;
+  --dark-200: #282828;
+  --primary-300: #42d392;
+  --dark-400: #575757;
+  --primary-400: #35eb9a;
+  --dark-500: #717171;
+  --dark-600: #bbb;
+  --primary-200: #33a06f;
+  --dark-300: #3f3f3f;
+  --fontConcertOne: "Concert One";
+}
+
+$break-point-smallTablet: 480px;
+$break-point-tablet: 760px;
+$break-point-desktop: 990px;
+$break-point-bigDesktop: 1500px;
+$break-point-maxDesktop: 1921px;
+
+@mixin smallTablet {
+  @media (max-width: $break-point-smallTablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $break-point-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $break-point-desktop) {
+    @content;
+  }
+}
+
+@mixin bigDesktop {
+  @media (max-width: $break-point-bigDesktop) {
+    @content;
+  }
+}
+
+@mixin maxDesktop {
+  @media (max-width: $break-point-maxDesktop) {
+    @content;
+  }
+}

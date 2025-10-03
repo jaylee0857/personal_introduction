@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="<%= VITE_FAVICON_URL %>" />
+  <meta name="description" content="<%= VITE_PROJECT_DESCRIPTION %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link id="icon" rel="icon" href="/src/assets/images/logo_BG/Hall_BG.png">
+  <title><%= VITE_PROJECT_AUTHOR %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    html {
+      touch-action: manipulation;
+    }
+  </style>
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body>
+<script>
+  window.addEventListener("wheel", function(event) {
+    if (event.ctrlKey) {
+      // 如果用戶使用了 Ctrl+滾輪進行縮放，則阻止
+      event.preventDefault();
+    }
+  }, { passive: false });
+
+</script>
+</html>

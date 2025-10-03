@@ -1,0 +1,70 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: normal;
+  }
+}
+
+/* 移除清單樣式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 移除超連結的預設樣式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 移除按鈕的預設樣式 */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 讓圖片可以自適應容器大小 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 移除表單元素的預設樣式 */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+/* 移除表格的預設間距 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

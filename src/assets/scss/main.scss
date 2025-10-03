@@ -1,0 +1,283 @@
+@import "@/assets/scss/reset";
+@import "@/assets/scss/animation";
+
+html,
+body {
+  // height: 100%;
+  font-family:
+    "Outfit",
+    "微軟正黑體",
+    Microsoft JhengHei,
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 88px;
+  padding-right: 88px;
+  @include desktop {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.card-pd {
+  padding: 88px;
+  @include desktop {
+    padding: 64px 24px;
+  }
+}
+.connectBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  letter-spacing: 0.8px;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 1.5vw;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.35;
+  position: relative;
+  color: var(--white);
+  background: var(--primary-100);
+  @include smallTablet {
+    width: 140px;
+    justify-content: center;
+  }
+  @include bigDesktop {
+    font-size: 20px;
+  }
+}
+.connectBtnImg {
+  margin-left: 0.5vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  @include bigDesktop {
+    width: 30px;
+    height: 30px;
+  }
+}
+.home-marquee {
+  width: 100%;
+  padding-top: 16px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  align-items: center;
+  justify-content: space-around;
+  @include desktop {
+    width: 100%;
+  }
+}
+@font-face {
+  font-family: "TradeGothicLTPro";
+  src: url("@/assets/font/TradeGothicLTPro-Cn18.185f3714.woff2") format("woff2");
+  font-weight: 400; // 正常字重
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TradeGothicLTPro";
+  src: url("@/assets/font/TradeGothicLTPro-Bold.484908e0.woff2") format("woff2");
+  font-weight: 600; // 輕字重
+  font-style: normal;
+}
+
+.layout-default {
+  min-height: 100vh;
+  background-color: var(--dark-100);
+  background-color: var(--dark-100);
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 64px 20px 64px;
+    position: fixed;
+    z-index: 999;
+    transform: translateY(-50%);
+    top: 50px;
+    @include desktop {
+      padding: 20px 0 0 0;
+    }
+
+    &-frontPage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--white);
+      background: var(--dark-100);
+      border-radius: 100%;
+      margin-left: 20px;
+      position: relative;
+      width: 3vw;
+      height: 3vw;
+      min-width: 50px;
+      min-height: 50px;
+      cursor: pointer;
+      @include desktop {
+      }
+      &--img {
+        width: 75%;
+        height: 75%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-linkBar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    @include desktop {
+      display: none;
+    }
+
+    a {
+      display: flex;
+      border: 2px solid var(--white);
+      background-color: var(--dark-100);
+      color: var(--white);
+      z-index: 1;
+      border-radius: 8px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 16px 24px;
+      font-size: 20px;
+      font-family: var(--fontConcertOne);
+      font-weight: 700;
+      line-height: 1.35;
+      position: relative;
+    }
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.35;
+    border: 2px solid var(--white);
+    background-color: var(--dark-100);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    @include smallTablet {
+      font-size: 14px;
+    }
+
+    &--fixed {
+      position: fixed;
+      top: 40px;
+      right: 20px;
+      z-index: 6000;
+    }
+  }
+
+  &-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  &-connect {
+    display: none;
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 20px;
+    }
+  }
+
+  &connectBar {
+    border: 2px solid var(--white);
+    background-color: var(--dark-100);
+    color: var(--white);
+    padding: 16px 24px;
+    font-size: 20px;
+    font-family: var(--fontConcertOne);
+    font-weight: 700;
+    line-height: 1.35;
+    border-radius: 100%;
+  }
+
+  &-suspension {
+    position: fixed;
+    z-index: 999;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+  }
+
+  &-suspensionBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+    gap: 20px;
+    background: var(--primary-200);
+    color: var(--white);
+    height: 160px;
+    width: 50px;
+
+    &--text {
+      display: inline-block;
+      transform: rotate(-90deg);
+      transform-origin: center;
+      font-size: 18px;
+    }
+  }
+}
+
+.connectLink {
+  width: 40px;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.page-section {
+  padding: 88px;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include desktop {
+    padding: 64px 24px;
+  }
+}
+
+.grid-col {
+  display: grid !important;
+  align-items: flex-start !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  &-two {
+    grid-template-columns: repeat(2, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  &-three {
+    grid-template-columns: repeat(3, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}
