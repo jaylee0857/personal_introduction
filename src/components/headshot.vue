@@ -111,10 +111,11 @@ onUnmounted(() => {
 <style lang="scss">
 .headshot {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding-top: 5vh;
   transform-style: preserve-3d;
   will-change: transform;
   transition: transform 0.1s ease-out;
